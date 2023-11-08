@@ -11,7 +11,7 @@ jobs:
     - uses: cachix/install-nix-action@v23
       with:
         nix_path: nixpkgs=channel:nixos-unstable
-    - uses: workflow/nix-shell-action@3.3.0
+    - uses: workflow/nix-shell-action@v3.3.0
       with:
         script: |
             just pdf
