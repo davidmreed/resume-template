@@ -11,10 +11,8 @@ jobs:
     - uses: cachix/install-nix-action@v23
       with:
         nix_path: nixpkgs=channel:nixos-unstable
-    - uses: workflow/nix-shell-action@v3.3.0
-      with:
-        script: |
-            just pdf
+    - uses: DeterminateSystems/magic-nix-cache-action@v2
+    - run: nix-shell --run "just pdf"
     - uses: actions/upload-artifact@v3
       with:
         name: Resume-David-Reed.pdf
