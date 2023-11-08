@@ -10,6 +10,6 @@ render: build pdf
 
 watch:
 	inotifywait -m -r . \
-	--exclude "(.*\\.pdf$)|public|justfile" \
+	--exclude "(.*\\.pdf$)|public|justfile|\\.git" \
 	-e close_write,move,create,delete \
 	| while read -r directory events filename; do echo $filename; just render; done
