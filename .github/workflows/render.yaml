@@ -1,0 +1,22 @@
+name: "Render Resume"
+on:
+  push:
+    branches:
+        - main
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v18
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    - uses: workflow/nix-shell-action@v3
+      with:
+        packages: make,weasyprint,zola
+        script: |
+            make pdf
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Resume-David-Reed.pdf
+        path: Resume-David-Reed.pdf
