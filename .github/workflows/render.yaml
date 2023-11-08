@@ -4,7 +4,7 @@ on:
     branches:
         - main
 jobs:
-  tests:
+  render:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -13,9 +13,9 @@ jobs:
         nix_path: nixpkgs=channel:nixos-unstable
     - uses: workflow/nix-shell-action@v3
       with:
-        packages: make,weasyprint,zola
+        packages: just,weasyprint,zola
         script: |
-            make pdf
+            just pdf
     - uses: actions/upload-artifact@v3
       with:
         name: Resume-David-Reed.pdf
