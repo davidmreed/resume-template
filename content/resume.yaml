@@ -1,0 +1,166 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json
+basics:
+  name: David Reed
+  label: Technical architect, engineer, communicator
+  email: david@ktema.org
+  url: https://ktema.org
+  summary: |
+    I am a product-minded full-stack engineer and technical architect. I lead
+    exceptional teams in building and scaling SaaS applications that shorten time-to-value
+    for customers and maximize productivity for internal stakeholders. I've designed,
+    shipped, and stewarded platforms that span CLI to cloud.
+
+    I'm passionate about delivering products that empower every role to do their
+    most impactful work, from engineers to business users. I believe in async, distributed
+    work and thrive in cross-functional teams. I strive to center compassion in everything
+    I build.
+  profiles:
+    - network: GitHub
+      username: davidmreed
+      url: https://github.com/davidmreed
+    - network: LinkedIn
+      username: davidreedbuilds
+      url: https://linkedin.com/in/davidreedbuilds
+work:
+  - name: Salesforce
+    position: Principal Member of Technical Staff / Architect
+    startDate: "2022-05-01"
+    highlights:
+      - Drove Solution Factory low-code development platform as Technical Architect.
+      - Collaborated with Product and Engineering stakeholders across *17 industry
+        verticals and product teams* to build *16 internal enablement initiatives*
+        and *3 customer acceleration solutions*.
+      - Eliminated *100%* of engineering cost for accelerators by enabling product
+        stakeholders. Achieved *85% cost reduction* in QA process. Improved sales
+        engineering readiness by *up to 12 weeks*.
+      - Designed and built patent-pending service for scalable push upgrades in Python,
+        with *over 2.8 million* customer upgrades in year 1.
+      - Owned full-cycle implementation for Solution Cloud (Kubernetes, Python, TypeScript,
+        React), including product vision, technical architecture, infrastructure,
+        development leadership, and SRE.
+      - Planned comprehensive rearchitecture of *3 products* from Heroku-based Python
+        monoliths to Docker/Kubernetes/Helm-based microservices in Python and Java.
+      - Maintained *8 applications* (Django/FastAPI web services, Python infrastructure services, and CLIs)
+        supporting development and customer-facing delivery for *15 Salesforce cloud
+        products*, *7 community programs*, and *dozens of external ISVs and open source
+        users*.
+      - Presented regularly to Salesforce Industries senior leaders and principal
+        architects and at global conferences.
+      - Established Architecture Review process and service ownership standards to
+        ensure consistent quality and create engineer growth opportunities.
+  - name: Salesforce
+    position: Lead Member of Technical Staff, Salesforce
+    startDate: "2021-05-01"
+    endDate: "2022-05-01"
+    highlights:
+      - Created new CI/CD and delivery automation solutions using CumulusCI, Salesforce
+        DX, GitHub Actions, Python/Django/FastAPI, TypeScript/React, Heroku, and Robot Framework/Selenium.
+      - Built automation to save engineers an average of *91%* on hands-on setup time.
+      - Implemented automated pre-production packaging and E2E testing across *more
+        than 30 projects*.
+      - Designed and built Metadata ETL Python framework for just-in-time delivery
+        of fine-grained updates to customers.
+      - Built intelligent Python/SQL/Salesforce data load engine, yielding *500%*
+        speed increases.
+      - Coauthored *6 Trailhead modules*, thousands of words of documentation.
+      - Presented *over 20* public-facing talks and articles evangelizing CumulusCI
+        and automation.
+  - name: Salesforce
+    position: Senior Member of Technical Staff
+    startDate: "2019-03-18"
+    endDate: "2021-05-01"
+    highlights:
+      - Created new automation capabilities using CumulusCI, Python/Django, TypeScript.
+      - Designed and implemented new dependency-resolution framework.
+      - Directly supported *5+ product teams* as packaging subject-matter expert.
+      - Executed build, release, and delivery processes for *more than 50* Salesforce
+        managed packages reaching *~120,000 orgs*.
+  - name: Radian Group
+    position: Application Architect
+    startDate: "2017-11-01"
+    endDate: "2021-03-18"
+    highlights:
+      - Developed Salesforce Lightning app to manage intake of *over $10M/mo* insurance
+        premiums.
+  - name: American Civil Liberties Union
+    position: Salesforce Developer
+    startDate: "2017-05-01"
+    endDate: "2017-11-01"
+    highlights:
+      - Applied enterprise large data volume patterns to process *50 million+* data sets and
+        *300,000+* donations per month on Salesforce.
+  - name: Santa Fe Institute
+    position: Data Systems Manager
+    startDate: "2012-01-01"
+    endDate: "2017-05-01"
+    highlights:
+      - Architected and built applications in Apex and Visualforce to support *5 departments*.
+      - Migrated *3 legacy systems* and *30 years of data* into Salesforce by creating
+        Python tools.
+education:
+  - institution: Florida State University
+    area: Ancient Greek
+    studyType: M.A.
+    startDate: "2009-01-01"
+    endDate: "2011-01-01"
+  - institution: St. John's College
+    area: Liberal Arts
+    studyType: B.A.
+    startDate: "2005-01-01"
+    endDate: "2009-01-01"
+awards:
+  - title: Salesforce TMP All-Star (top *1%* engineer company-wide)
+    date: "2023-06-01"
+  - title: Salesforce MVP alumnus
+    date: "2019-01-01"
+  - title: Community-elected moderator, Salesforce Stack Exchange
+    date: "2019-01-01"
+skills:
+  - name: Python
+  - name: Rust
+  - name: C
+  - name: TypeScript
+  - name: JavaScript
+  - name: SQL
+  - name: React
+  - name: Svelte
+  - name: REST APIs
+  - name: GraphQL APIs
+  - name: Postgres
+  - name: Redis
+  - name: Docker
+  - name: Kubernetes
+  - name: Helm
+  - name: Salesforce
+  - name: Heroku
+  - name: Django
+  - name: FastAPI
+  - name: CI/CD
+  - name: GitHub Actions
+    keywords:
+      - break
+  - name: System design
+  - name: Technical mentorship
+  - name: Agile
+  - name: Stakeholder management
+  - name: Platform engineering
+  - name: Developer experience
+  - name: Cross-functional collaboration
+  - name: Consensus building
+  - name: Public speaking
+  - name: Developer advocacy
+  - name: Product ownership
+  - name: Free and Open Source (FOSS) software
+projects:
+  - name: PayTransparency.work
+    description: application mapping pay disclosure laws in TypeScript with SvelteKit.
+  - name: Baris
+    description: Rust crate for async, parallelized Salesforce integrations.
+  - name: Amaxa
+    description:
+      Python Salesforce ETL tool for multi-object data loads with dependency
+      tracing.
+  - name: Bibliothekai
+    description:
+      web app cataloging translations of classical texts using Python,
+      Django, LWC, TypeScript, and GraphQL.

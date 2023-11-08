@@ -1,0 +1,215 @@
+@media print {
+    :root {
+        /* Loosely based on Gruvbox Light */
+        --accent: #6b0000;
+        /* red */
+        --accent-bg: white;
+        /* bg0_h */
+        --bg: white;
+        --text: #3c3836;
+        /* fg */
+        --text-light: #7c6f64;
+        /*fg4 */
+        --code: #3c3836;
+        /* blue */
+        --header: white;
+        /* bg0_h */
+        --border: #282828;
+        /* fg0 */
+        --preformatted: #458588;
+        --marked: #ffdd33;
+        --disabled: #efefef;
+    }
+
+    header,
+    footer {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Arial Black';
+        font-weight: bold;
+        transform: scaleX(0.85);
+        text-align: left;
+        transform-origin: 0 100%;
+        padding: 0;
+        line-height: 1.1
+    }
+
+    h1 {
+        font-size: 14pt;
+    }
+
+    h1 span:first-of-type {
+        font-family: 'Bitstream Charter';
+        font-weight: normal;
+        color: var(--accent);
+        transform: scaleX(100);
+    }
+
+    h2 {
+        font-size: 13pt;
+        margin: 0.9rem 0 0.25rem 0;
+    }
+
+    h3 {
+        font-size: 12pt;
+        margin: 0.5rem 0 0.25rem 0;
+    }
+
+    p,
+    li,
+    ul {
+        margin: 0;
+        line-height: 1.3;
+        padding: 0;
+        padding-bottom: 0.3rem;
+    }
+
+
+    @font-face {
+        font-family: 'Bitstream Charter';
+        font-weight: normal;
+        src: url("fonts/Charter-Regular.otf");
+    }
+
+    @font-face {
+        font-family: 'Bitstream Charter';
+        font-weight: bold;
+        src: url("fonts/Charter-Bold.otf");
+    }
+
+    @font-face {
+        font-family: 'Bitstream Charter';
+        font-style: italic;
+        src: url("fonts/Charter-Italic.otf");
+    }
+
+    @font-face {
+        font-family: 'Bitstream Charter';
+        font-weight: bold;
+        font-style: italic;
+        src: url("fonts/Charter-BoldItalic.otf");
+    }
+
+    @page {
+        margin: 0.75in;
+        padding: 0;
+        size: letter;
+    }
+
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+        font-family: 'Bitstream Charter';
+        line-height: normal !important;
+    }
+
+    span.date {
+        position: absolute;
+        left: 5.5in;
+    }
+
+    ul span.date {
+        /* account for scaleX transform */
+        position: absolute;
+        left: 4.675in;
+    }
+}
+
+@media screen {
+    span.date {
+        float: right;
+    }
+
+    h1 span {
+        font-size: 50%;
+        display: block;
+    }
+
+    h1 span:first-of-type {
+        display: none;
+    }
+
+    em {
+        font-weight: bold;
+    }
+}
+
+h1 {
+    border-bottom: 3pt solid;
+    border-bottom-color: var(--accent);
+    padding-bottom: 2pt;
+
+}
+
+code {
+    color: var(--text);
+}
+
+
+em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+.inline-bullets ul {
+    list-style-type: none;
+}
+
+.inline-bullets ul li:before {
+    content: "∙ ";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.inline-bullets ul li:first-of-type:before {
+    content: "";
+}
+
+.inline-bullets ul li {
+    display: inline;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding-bottom: 0.3rem;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl dd {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+dl dt {
+    display: inline;
+    font-style: italic;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    margin-right: 1rem;
+}
+
+abbr {
+    font-size: 80%;
+    text-decoration: none !important;
+}
+
+body {
+    font-size: 1.15rem;
+    line-height: 1.5;
+}

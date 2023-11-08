@@ -1,0 +1,103 @@
+{% set resume = load_data(path="content/resume.yaml") %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ resume.basics.name }}</title>
+</head>
+
+<body>
+    <main>
+
+        <h1>
+            {{ resume.basics.name }} <span>∙</span> <span>{{ resume.basics.label }}</span>
+        </h1>
+
+        <dl>
+            {% if resume.basics.email %}
+            <dt>email</dt>
+            <dd>
+                <code>{{ resume.basics.email }}</code>
+            </dd>
+            {% endif %}
+            {% if resume.basics.url %}
+            <dt>web</dt>
+            <dd><code>{{ resume.basics.url }}</code></dd>
+            {% endif %}
+            {% if resume.basics.profiles %}
+            {% for network in resume.basics.profiles %}
+            <dt>{{ network.network | lower }}</dt>
+            <dd><code>{{ network.username }}</code></dd>
+            {% endfor %}
+            {% endif %}
+        </dl>
+
+        {{ resume.basics.summary | markdown | safe }}
+
+        {% if resume.skills %}
+        <h2>Skills and Competencies</h2>
+
+        <div class="inline-bullets">
+            <ul>
+                {% for skill in resume.skills %}
+                <li>{{ skill.name }}</li>
+                {% if skill.keywords and "break" in skill.keywords %}
+            </ul>
+        </div>
+        <div class="inline-bullets" style="padding-top: 0.5rem;">
+            <ul>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% endif %}
+
+        <h2>Recent Experience</h2>
+        {% for work in resume.work %}
+        <h3>{{ work.position }}, {{ work.name }} <span class="date">{{ work.startDate | date(format="%Y") }}-{% if
+                work.endDate
+                %}{{ work.endDate |
+                date(format="%Y") }}{% endif %}</span></h3>
+
+        <ul>
+            {% for highlight in work.highlights %}
+            <li>{{ highlight | markdown(inline=true) | safe }}</li>
+            {% endfor %}
+        </ul>
+
+        {% endfor %}
+
+        <h2>Service and Honors</h2>
+
+        <ul>
+            {% for award in resume.awards %}
+            <li>{{ award.title | markdown(inline=true) | safe }} {% if award.date %}<span class="date">{{ award.date |
+                    date(format="%Y") }}</span>{% endif %}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Open Source</h2>
+
+        <ul>
+            {% for project in resume.projects %}
+            <li><em>{{ project.name }}</em>: {{ project.description | markdown(inline=true) | safe }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Education</h2>
+
+        <ul>
+            {% for education in resume.education %}
+            <li>{{ education.studyType }}, {{ education.area }}, {{ education.institution }}&nbsp;<span class="date">{{
+                    education.startDate | date(format="%Y") }}-{{ education.endDate | date(format="%Y") }}</span></li>
+            {% endfor %}
+        </ul>
+
+    </main>
+</body>
+
+</html>
