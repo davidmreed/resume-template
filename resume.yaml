@@ -1,11 +1,15 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json
 basics:
   name: Camina Drummer
-  label:
+  label: Pirate queen of the Belt
   email: drummer@tynan.opa
   url: https://tynan.opa
   summary: |
-    Pirate queen of the Belt. *This is an example resume template*.
+    Experienced leader with deep relationships across Earth, Mars, and the Belt. 
+    Demonstrated expertise in managing complex relationships and stakeholder networks.
+    Qualified starship captain with hands-on approach and close combat skills.
+
+    *This is an example resume template*.
   profiles:
     - network: BeltaNet
       username: camina
